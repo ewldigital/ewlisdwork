@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Excel Record Viewer - Multi-Sheet Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Excel Record Viewer</div>
+      <div class="header-glow">Programme & Design by Soumen Mishra</div>
+      <div class="datetime" id="clockDate"></div>
+    </header>
+
+    <div class="controls">
+      <label class="btn" for="fileInput">Upload Excel/CSV</label>
+      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" />
+    </div>
+
+    <div class="meta" id="meta">No file loaded.</div>
+
+    <div class="search-container">
+      <input type="text" id="searchBox" placeholder="Search any text across all sheets..." disabled />
+      <button class="clear-btn" id="clearBtn" style="display:none;">&times;</button>
+      <button class="print-btn" id="printBtn" title="Print Record">
+        🖨️
+        <span>Print</span>
+      </button>
+      <div class="suggestions" id="suggestions" style="display:none;"></div>
+    </div>
+
+    <div class="detail-box" id="detailBox">Select a record to view details.</div>
+  </div>
+
+  <!-- XLSX library -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <!-- Custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
